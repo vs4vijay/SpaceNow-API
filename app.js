@@ -5,17 +5,13 @@ import express from 'express';
 import config from './config';
 import routes from './src/routes';
 
+import logger from './src/utils';
+
 
 const app = express();
 
-const logger = (req, res, next) => {
-    console.log(`[LOG]`);
-    next();
-};
-
 
 // Application Middlewares
-// app.use(logger);
 app.use(express.json());
 
 
@@ -31,5 +27,5 @@ app.use('/api/v1', routes.users);
 
 // Start Server
 app.listen(config.server.port, () => {
-    console.log(`[+] Server Started on Port: ${config.server.port}`);
+    logger.info(`[+] Server Started on Port: ${config.server.port}`);
 });

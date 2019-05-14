@@ -14,7 +14,7 @@ requiredEnvVariables.forEach(name => {
 });
 
 
-const envVariablesSchema = joi.object().keys({
+const envVariablesSchema = joi.object({
   SERVER_ENV: joi.string().valid(['local', 'dev', 'qa', 'prod']).required(),
   SERVER_PORT: joi.number().required(),
   LOG_LEVEL: joi.string().allow(['error', 'warn', 'info', 'verbose', 'debug']).default('info')
@@ -22,8 +22,6 @@ const envVariablesSchema = joi.object().keys({
 
 
 const { error, value: envVariables } = joi.validate(process.env, envVariablesSchema);
-
-console.log('envVariables', envVariables);
 
 if (error) {
   throw new Error(`[-] Config validation error: ${error.message}`);
