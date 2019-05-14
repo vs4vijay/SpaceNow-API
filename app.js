@@ -2,10 +2,12 @@
 import 'dotenv/config';
 import express from 'express';
 
+import config from './config';
+
 import routes from './src/routes';
 
 const app = express();
-const PORT = process.env.SERVER_PORT || 9000;
+// const PORT = process.env.SERVER_PORT || 9000;
 
 const logger = (req, res, next) => {
     console.log(`[LOG]`);
@@ -25,6 +27,6 @@ app.use('/api/v1', routes.users);
 
 
 
-app.listen(PORT, () => {
-    console.log(`Server Started on Port: ${PORT}`);
+app.listen(config.server.port, () => {
+    console.log(`Server Started on Port: ${config.server.port}`);
 });
