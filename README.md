@@ -41,8 +41,9 @@ Create a new database and create a new user which can access that database only.
 
 ## Development
 
-npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
-npx sequelize-cli db:migrate
+sequelize model:generate --name user --attributes name:string,uuid:uuid,isActive:boolean,deletedAt:boolean
+
+sequelize --env local db:migrate
 
 
 

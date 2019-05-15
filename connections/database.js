@@ -3,21 +3,21 @@
 
 import Sequelize from 'sequelize';
 
-import config from '../../config';
+import config from '../config';
 import logger from '../utils/logger';
 
 
 const sequelize = new Sequelize(
-  config.database.name, 
+  config.database.database, 
 	config.database.username,
 	config.database.password, 
 {
   host: config.database.host,
-  dialect: config.database.type,
+  dialect: config.database.dialect,
 
   define: {
     timestamps: true,
-    underscored: true,
+    underscored: false,
     paranoid: true
   },
 

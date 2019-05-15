@@ -16,7 +16,7 @@ User.init({
     type: Sequelize.DataTypes.STRING,
     allowNull: false
   }, 
-  is_active: {
+  isActive: {
   	type: Sequelize.DataTypes.BOOLEAN,
   	defaultValue: true
   }

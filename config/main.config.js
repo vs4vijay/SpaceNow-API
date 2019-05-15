@@ -34,9 +34,9 @@ const config = {
     port: Number(envVariables.SERVER_PORT)
   },
   database: {
-    type: envVariables.DATABASE_TYPE,
+    dialect: envVariables.DATABASE_TYPE,
     host: envVariables.DATABASE_HOST,
-    name: envVariables.DATABASE_NAME,
+    database: envVariables.DATABASE_NAME,
     username: envVariables.DATABASE_USERNAME,
     password: envVariables.DATABASE_PASSWORD,
   },

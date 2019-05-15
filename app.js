@@ -4,9 +4,8 @@
 import express from 'express';
 
 import config from './config';
-import routes from './src/routes';
-
-import logger from './src/utils';
+import routes from './routes';
+import logger from './utils';
 
 
 const app = express();
