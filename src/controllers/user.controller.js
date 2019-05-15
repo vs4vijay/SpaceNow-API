@@ -1,5 +1,7 @@
 import express from 'express';
 
+import connections from '../connections';
+
 const router = express.Router();
 
 router.get('/users', function(req, res) {

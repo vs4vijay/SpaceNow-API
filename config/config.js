@@ -3,9 +3,9 @@
 import 'dotenv/config';
 import joi from '@hapi/joi';
 
-
 // Required environment variables
-const requiredEnvVariables = ['SERVER_ENV', 'SERVER_PORT'];
+const requiredEnvVariables = ['SERVER_ENV', 'SERVER_PORT', 
+                              'DATABASE_TYPE', 'DATABASE_HOST', 'DATABASE_NAME', 'DATABASE_USERNAME', 'DATABASE_PASSWORD'];
 
 requiredEnvVariables.forEach(name => {
   if (!process.env[name]) {
@@ -29,11 +29,18 @@ if (error) {
 
 const config = {
   env: envVariables.SERVER_ENV,
-  logger: {
-    level: envVariables.LOG_LEVEL
-  },
   server: {
     port: Number(envVariables.SERVER_PORT)
+  },
+  database: {
+    type: envVariables.DATABASE_TYPE,
+    host: envVariables.DATABASE_HOST,
+    name: envVariables.DATABASE_NAME,
+    username: envVariables.DATABASE_USERNAME,
+    password: envVariables.DATABASE_PASSWORD,
+  },
+  logger: {
+    level: envVariables.LOG_LEVEL
   }
 };
 
