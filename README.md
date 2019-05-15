@@ -13,6 +13,9 @@
 
 All Enviroment vairables should be in `.env` file
 
+Env. Name | Value
+----------|-------
+SERVER_ENV|`local`
 
 
 
@@ -64,20 +67,20 @@ Create a new database and create a new user which can access that database only.
 
 ## To Do
 
- [x] Project Setup
- [x] Database Connection, ORM
-  [x] Migrations & Sequelize CLI
-[ ] setup.sh & start.sh
-[ ] Seeder
-    [ ] Create Database and Tables if not exists
-[ ] Logging
-[ ] IoC
-[ ] Base Classes
-[ ] Proper Imports
-[x] CRUD REST API
-[ ] Standard Response and Error
-[ ] Validations
-[ ] Limit, Offset
-[ ] Authentication
-[ ] Deployment / Monitoring
-[ ] CI/CD
+- [x] Project Setup
+- [x] Database Connection, ORM
+- [x] Migrations & Sequelize CLI
+- [ ] setup.sh & start.sh
+- [ ] Seeder
+    - [ ] Create Database and Tables if not exists
+- [ ] Logging
+- [ ] IoC
+- [ ] Base Classes
+- [ ] Proper Imports
+- [x] CRUD REST API
+- [ ] Standard Response and Error
+- [ ] Validations
+- [ ] Limit, Offset
+- [ ] Authentication
+- [ ] Deployment / Monitoring
+- [ ] CI/CD
