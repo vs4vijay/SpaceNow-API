@@ -41,9 +41,18 @@ Create a new database and create a new user which can access that database only.
 
 ## Development
 
-sequelize model:generate --name user --attributes name:string,uuid:uuid,isActive:boolean,deletedAt:boolean
 
-sequelize --env local db:migrate
+### Create a new Model
+
+1. Generate the migration file and model using Sequelize CLI:
+
+`sequelize model:generate --name user --attributes name:string,uuid:uuid,isActive:boolean,deletedAt:boolean`
+
+2. Modify the generated model.js file to make it compatible with classes ES6
+
+3. Run the migration to make changes:
+
+`sequelize --env local db:migrate`
 
 
 
@@ -57,7 +66,10 @@ sequelize --env local db:migrate
 
 [x] Project Setup
 [x] Database Connection, ORM
-[ ] Migrations, Seeder
+[x] Migrations & Sequelize CLI
+[ ] setup.sh & start.sh
+[ ] Seeder
+    [ ] Create Database and Tables if not exists
 [ ] Logging
 [ ] IoC
 [ ] Base Classes
