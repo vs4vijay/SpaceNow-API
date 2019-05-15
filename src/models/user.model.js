@@ -4,14 +4,20 @@ import Sequelize from 'sequelize';
 
 import connections from '../connections';
 
-const Model = Sequelize.Model;
-
-class User extends Model {};
+class User extends Sequelize.Model {};
 
 User.init({
+	uuid: {
+		type: Sequelize.DataTypes.UUID,
+		defaultValue: Sequelize.DataTypes.UUIDV4
+	},
   name: {
-    type: Sequelize.STRING,
+    type: Sequelize.DataTypes.STRING,
     allowNull: false
+  }, 
+  is_active: {
+  	type: Sequelize.DataTypes.BOOLEAN,
+  	defaultValue: true
   }
 }, {
   sequelize: connections.sequelize,

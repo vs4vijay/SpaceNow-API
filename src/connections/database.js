@@ -17,7 +17,8 @@ const sequelize = new Sequelize(
 
   define: {
     timestamps: true,
-    underscored: true
+    underscored: true,
+    paranoid: true
   },
 
   pool: {
@@ -30,10 +31,10 @@ const sequelize = new Sequelize(
 sequelize
   .authenticate()
   .then(() => {
-    logger.info('Connection has been established successfully.');
+    logger.info('[+] Connection has been established successfully.');
   })
   .catch(err => {
-    logger.error('Unable to connect to the database:', err);
+    logger.error('[-] Unable to connect to the database:', err);
   });
 
 export default sequelize;
