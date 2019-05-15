@@ -39,11 +39,17 @@ Create a new database and create a new user which can access that database only.
 
 
 
-## Migrations
+## Development
 
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
 npx sequelize-cli db:migrate
 
+
+
+## Guidelines
+
+- Use `use strict` option in all files
+- create `index.js` in all folders
 
 
 ## To Do
