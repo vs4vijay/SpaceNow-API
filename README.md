@@ -53,8 +53,11 @@ npx sequelize-cli db:migrate
 [ ] Migrations, Seeder
 [ ] Logging
 [ ] IoC
-[ ] REST API
-    [ ] Standard Response and Error
+[ ] Proper Imports
+[x] CRUD REST API
+[ ] Standard Response and Error
+[ ] Validations
+[ ] Limit, Offset
 [ ] Authentication
 [ ] Deployment / Monitoring
 [ ] CI/CD
