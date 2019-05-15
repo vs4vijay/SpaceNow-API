@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
+    "start": "nodemon app.js --exec babel-node",
     "build": "babel app.js --presets babel-preset-env --out-dir dist"
   },
   "dependencies": {

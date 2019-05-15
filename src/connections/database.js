@@ -7,12 +7,24 @@ import config from '../../config';
 import logger from '../utils/logger';
 
 
-const sequelize = new Sequelize(config.database.name, 
-								config.database.username,
-								config.database.password, 
+const sequelize = new Sequelize(
+  config.database.name, 
+	config.database.username,
+	config.database.password, 
 {
   host: config.database.host,
-  dialect: config.database.type
+  dialect: config.database.type,
+
+  define: {
+    timestamps: true,
+    underscored: true
+  },
+
+  pool: {
+    max: 5,
+    idle: 30000,
+    acquire: 60000,
+  },
 });
 
 sequelize

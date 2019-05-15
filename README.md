@@ -39,3 +39,14 @@ Create a new database and create a new user which can access that database only.
 
 
 ## To Do
+
+[x] Project Setup
+[x] Database Connection, ORM
+[ ] Migrations, Seeder
+[ ] Logging
+[ ] IoC
+[ ] REST API
+    [ ] Standard Response and Error
+[ ] Authentication
+[ ] Deployment / Monitoring
+[ ] CI/CD
