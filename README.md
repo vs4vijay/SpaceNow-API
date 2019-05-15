@@ -64,9 +64,9 @@ Create a new database and create a new user which can access that database only.
 
 ## To Do
 
-[x] Project Setup
-[x] Database Connection, ORM
-[x] Migrations & Sequelize CLI
+ [x] Project Setup
+ [x] Database Connection, ORM
+  [x] Migrations & Sequelize CLI
 [ ] setup.sh & start.sh
 [ ] Seeder
     [ ] Create Database and Tables if not exists
