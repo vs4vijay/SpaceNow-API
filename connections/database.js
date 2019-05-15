@@ -26,6 +26,8 @@ const sequelize = new Sequelize(
     idle: 30000,
     acquire: 60000,
   },
+
+  logging: console.log
 });
 
 sequelize

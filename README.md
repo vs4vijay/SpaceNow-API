@@ -73,7 +73,8 @@ Create a new database and create a new user which can access that database only.
 - [ ] setup.sh & start.sh
 - [ ] Seeder
     - [ ] Create Database and Tables if not exists
-- [ ] Logging
+- [ ] Logging (https://logrocket.com/)
+    - [ ] Audit Logs / Tracability
 - [ ] IoC
 - [ ] Base Classes
 - [ ] Proper Imports
@@ -82,5 +83,8 @@ Create a new database and create a new user which can access that database only.
 - [ ] Validations
 - [ ] Limit, Offset
 - [ ] Authentication
+- [ ] Security (Helmet)
 - [ ] Deployment / Monitoring
 - [ ] CI/CD
+- [ ] Caching
+- [ ] ElasticSearch
