@@ -38,6 +38,14 @@ Create a new database and create a new user which can access that database only.
 `GRANT ALL PRIVILEGES ON spacenow_local.* TO 'spacenow_user'@'localhost';`
 
 
+
+## Migrations
+
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+npx sequelize-cli db:migrate
+
+
+
 ## To Do
 
 [x] Project Setup
