@@ -53,6 +53,7 @@ npx sequelize-cli db:migrate
 [ ] Migrations, Seeder
 [ ] Logging
 [ ] IoC
+[ ] Base Classes
 [ ] Proper Imports
 [x] CRUD REST API
 [ ] Standard Response and Error

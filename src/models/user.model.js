@@ -1,5 +1,6 @@
 'use strict';
 
+
 import Sequelize from 'sequelize';
 
 import connections from '../connections';
