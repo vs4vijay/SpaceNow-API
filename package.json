@@ -1,4 +1,7 @@
 {
+  "engines" : { 
+    "node" : "10.*" 
+  },
   "scripts": {
     "start": "nodemon app.js --exec babel-node",
     "build": "babel app.js --presets babel-preset-env --out-dir dist"

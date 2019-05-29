@@ -1,0 +1,4 @@
+applications:
+- name: SpaceTime-API
+  random-route: true
+  memory: 256M
