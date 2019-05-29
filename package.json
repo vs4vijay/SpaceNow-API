@@ -4,7 +4,7 @@
   },
   "scripts": {
     "start": "nodemon app.js --exec babel-node",
-    "build": "babel app.js --presets babel-preset-env --out-dir dist"
+    "build": "babel app.js --out-dir dist"
   },
   "dependencies": {
     "@hapi/joi": "^15.0.3",
