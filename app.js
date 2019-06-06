@@ -15,13 +15,17 @@ const app = express();
 app.use(express.json());
 
 
-// Health Check API
 app.get('/', (req, res) => {
     res.send({success: true, message: 'Server is Running'});
 });
 
+// Health Check API
+app.get('/api/health-check', (req, res) => {
+    res.send({success: true, message: 'Health Check'});
+});
+
 app.get('*', (req, res) => {
-  res.json({success: true, message: 'Server is Running'});
+  res.status(404).json({success: false, message: 'Resource not found'});
 });
 
 
