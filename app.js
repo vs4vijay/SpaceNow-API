@@ -16,8 +16,12 @@ app.use(express.json());
 
 
 // Health Check API
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
     res.send({success: true, message: 'Server is Running'});
+});
+
+app.get('*', (req, res) => {
+  res.json({success: true, message: 'Server is Running'});
 });
 
 
@@ -26,6 +30,10 @@ app.use('/api/v1', routes.users);
 
 
 // Start Server
-app.listen(config.server.port, () => {
-    logger.info(`[+] Server Started on Port: ${config.server.port}`);
-});
+if (!module.parent) {
+  app.listen(config.server.port, () => {
+      logger.info(`[+] Server Started on Port: ${config.server.port}`);
+  });
+}
+
+export default app;
