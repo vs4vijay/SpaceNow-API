@@ -19,12 +19,12 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.send({success: true, message: 'Server is Running'});
+  res.send({success: true, message: 'Server is Running'});
 });
 
 // Health Check API
 app.get('/api/health-check', (req, res) => {
-    res.send({success: true, message: 'Health Check'});
+  res.send({success: true, message: 'Health Check'});
 });
 
 app.get('*', (req, res) => {
@@ -39,7 +39,7 @@ app.use('/api/v1', routes.users);
 // Start Server
 if (!module.parent) {
   app.listen(config.server.port, () => {
-      logger.info(`[+] Server Started on Port: ${config.server.port}`);
+    logger.info(`[+] Server Started on Port: ${config.server.port}`);
   });
 }
 

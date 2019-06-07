@@ -6,7 +6,7 @@ import joi from '@hapi/joi';
 
 // Required environment variables
 const requiredEnvVariables = ['SERVER_ENV', 'SERVER_PORT', 
-                              'DATABASE_TYPE', 'DATABASE_HOST', 'DATABASE_NAME', 'DATABASE_USERNAME', 'DATABASE_PASSWORD'];
+  'DATABASE_TYPE', 'DATABASE_HOST', 'DATABASE_NAME', 'DATABASE_USERNAME', 'DATABASE_PASSWORD'];
 
 requiredEnvVariables.forEach(name => {
   if (!process.env[name]) {
