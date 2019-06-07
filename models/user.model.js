@@ -17,8 +17,8 @@ User.init({
     allowNull: false
   }, 
   isActive: {
-  	type: Sequelize.DataTypes.BOOLEAN,
-  	defaultValue: true
+    type: Sequelize.DataTypes.BOOLEAN,
+    defaultValue: true
   }
 }, {
   sequelize: connections.sequelize,

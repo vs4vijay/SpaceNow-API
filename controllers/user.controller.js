@@ -3,7 +3,6 @@
 
 import express from 'express';
 
-import connections from '../connections';
 import services from '../services';
 
 const router = express.Router();
