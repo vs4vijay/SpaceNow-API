@@ -27,13 +27,17 @@ app.get('/api/health-check', (req, res) => {
   res.send({success: true, message: 'Health Check'});
 });
 
-app.get('*', (req, res) => {
-  res.status(404).json({success: false, message: 'Resource not found'});
-});
 
 
 // Application Routes
 app.use('/api/v1', routes.users);
+
+
+
+// Not Found Route
+app.get('*', (req, res) => {
+  res.status(404).json({success: false, message: 'Resource not found'});
+});
 
 
 // Start Server
