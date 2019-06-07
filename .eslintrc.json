@@ -14,6 +14,12 @@
     },
     "rules": {
         "indent": ["error", 2],
+        "camelcase": "error",
+        "semi": "error",
+
+//        "strict": "off",
+//        "no-console": "off",
+
         "quotes": ["warn", "single"]
     }
 }

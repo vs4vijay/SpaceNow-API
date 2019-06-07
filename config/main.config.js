@@ -10,7 +10,7 @@ const requiredEnvVariables = ['SERVER_ENV', 'SERVER_PORT',
 
 requiredEnvVariables.forEach(name => {
   if (!process.env[name]) {
-    throw new Error(`[-] Environment variable ${name} is missing`)
+    throw new Error(`[-] Environment variable ${name} is missing`);
   }
 });
 
