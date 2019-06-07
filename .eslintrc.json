@@ -18,7 +18,7 @@
         "semi": "error",
 
 //        "strict": "off",
-//        "no-console": "off",
+//        "no-console": "warn",
 
         "quotes": ["warn", "single"]
     }

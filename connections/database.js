@@ -27,7 +27,7 @@ const sequelize = new Sequelize(
       acquire: 60000,
     },
 
-    logging: console.log
+    logging: console.log // eslint-disable-line
   });
 
 sequelize
