@@ -11,6 +11,9 @@ import logger from './utils';
 const app = express();
 
 
+app.set('etag', false);
+app.set('x-powered-by', false);
+
 // Application Middlewares
 app.use(express.json());
 

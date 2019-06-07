@@ -85,6 +85,7 @@ Create a new database and create a new user which can access that database only.
 - [ ] Authentication
 - [ ] Security (Helmet)
 - [ ] Deployment / Monitoring
+- [ ] Dockerize
 - [ ] CI/CD
 - [ ] Caching
 - [ ] ElasticSearch
