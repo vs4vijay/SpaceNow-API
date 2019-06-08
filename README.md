@@ -65,6 +65,33 @@ Create a new database and create a new user which can access that database only.
 OR
 `NODE_ENV=local sequelize db:migrate`
 
+### Adding and Removing a column
+
+1. Generate migration only using Sequelize CLI:
+
+`sequelize migration:create --name add-email-to-user`
+
+2. Modify migration file to make changes
+
+It will create a file in `migrations/` folder with `<timestamp>-add-email-to-user.js`. Modify the migration file to accommodate changes.
+
+Example:
+```
+  queryInterface.addColumn('users', 'email', {
+    type: Sequelize.STRING
+  })
+```
+
+3. Modify model file to reflect those changes in ORM.
+
+Add or Remove appropriate fields to `user.model.js`.
+
+Example:
+```
+  email: {
+    type: Sequelize.DataTypes.STRING,
+  }
+```
 
 
 ## Guidelines

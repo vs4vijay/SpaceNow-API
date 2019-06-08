@@ -15,7 +15,10 @@ User.init({
   name: {
     type: Sequelize.DataTypes.STRING,
     allowNull: false
-  }, 
+  },
+  email: {
+    type: Sequelize.DataTypes.STRING,
+  },
   isActive: {
     type: Sequelize.DataTypes.BOOLEAN,
     defaultValue: true
