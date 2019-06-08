@@ -40,6 +40,7 @@ DATABASE_PASSWORD|< password >
 Create a new database and create a new user which can access that database only.
 
 `CREATE DATABASE spacenow_local;`
+(Can be done by this as well `sequelize --env local db:create`)
 
 `CREATE USER 'spacenow_user'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';`
 
@@ -54,13 +55,15 @@ Create a new database and create a new user which can access that database only.
 
 1. Generate the migration file and model using Sequelize CLI:
 
-`sequelize model:generate --name user --attributes name:string,uuid:uuid,isActive:boolean,deletedAt:boolean`
+`sequelize model:create --name user --attributes name:string,uuid:uuid,isActive:boolean,deletedAt:boolean`
 
 2. Modify the generated model.js file to make it compatible with classes ES6
 
 3. Run the migration to make changes:
 
 `sequelize --env local db:migrate`
+OR
+`NODE_ENV=local sequelize db:migrate`
 
 
 
@@ -75,6 +78,7 @@ Create a new database and create a new user which can access that database only.
 - [x] Project Setup
 - [x] Database Connection, ORM
 - [x] Migrations & Sequelize CLI
+  - `NODE_ENV=local sequelize db:migrate`
 - [ ] setup.sh & start.sh
 - [ ] Seeder
     - [ ] Create Database and Tables if not exists
@@ -85,6 +89,8 @@ Create a new database and create a new user which can access that database only.
 - [ ] Proper Imports
 - [x] CRUD REST API
 - [ ] Standard Response and Error
+- [x] ESLint
+  - `yarn eslint .`
 - [ ] Validations
 - [ ] Limit, Offset
 - [ ] Authentication

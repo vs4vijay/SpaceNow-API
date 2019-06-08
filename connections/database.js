@@ -39,4 +39,7 @@ sequelize
     logger.error('[-] Unable to connect to the database:', err);
   });
 
+// TODO: Not sure if we need to do sync each time
+// sequelize.sync().then(function() {});
+
 export default sequelize;
