@@ -16,7 +16,12 @@ All Enviroment vairables should be in `.env` file
 Env. Name | Value
 ----------|-------
 SERVER_ENV|`local`
-
+SERVER_PORT|9000
+DATABASE_TYPE|mysql
+DATABASE_HOST|localhost
+DATABASE_NAME|spacenow_local
+DATABASE_USERNAME|< username >
+DATABASE_PASSWORD|< password >
 
 
 
@@ -84,6 +89,8 @@ Create a new database and create a new user which can access that database only.
 - [ ] Limit, Offset
 - [ ] Authentication
 - [ ] Security (Helmet)
+  - https://expressjs.com/en/advanced/best-practice-security.html
+  - https://github.com/RisingStack/protect
 - [ ] Deployment / Monitoring
 - [ ] Dockerize
 - [ ] CI/CD
