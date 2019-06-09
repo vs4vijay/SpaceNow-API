@@ -33,11 +33,13 @@ DATABASE_PASSWORD|< password >
 
 ## Deployment
 
-
+<TBD>
 
 ## Database Setup
 
 Create a new database and create a new user which can access that database only.
+
+### MySQL
 
 `CREATE DATABASE spacenow_local;`
 (Can be done by this as well `sequelize --env local db:create`)
@@ -45,6 +47,17 @@ Create a new database and create a new user which can access that database only.
 `CREATE USER 'spacenow_user'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';`
 
 `GRANT ALL PRIVILEGES ON spacenow_local.* TO 'spacenow_user'@'localhost';`
+
+### PostgreSQL
+
+Create admin-user and db
+```
+createuser spacenow_dev --createdb --superuser
+createdb spacenow_user --username spacenow_dev
+```
+
+Verify using command line
+`psql -d spacenow_dev -U spacenow_user`
 
 
 
@@ -128,4 +141,6 @@ Example:
 - [ ] Dockerize
 - [ ] CI/CD
 - [ ] Caching
+  - Redis
+- Grafana / Prometheus
 - [ ] ElasticSearch
