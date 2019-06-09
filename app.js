@@ -3,9 +3,9 @@
 
 import express from 'express';
 
-import config from './config';
-import routes from './routes';
-import logger from './utils';
+import { config } from './config';
+import { users } from './routes';
+import { logger } from './utils';
 
 
 const app = express();
@@ -30,7 +30,7 @@ app.get('/api/health-check', (req, res) => {
 
 
 // Application Routes
-app.use('/api/v1', routes.users);
+app.use('/api/v1', users);
 
 
 

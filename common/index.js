@@ -3,6 +3,6 @@
 
 import container from './container';
 
-export default {
+export {
   container
 };

@@ -3,6 +3,6 @@
 
 import UserService from './user.service';
 
-export default {
+export {
   UserService
 };

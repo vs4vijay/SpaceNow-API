@@ -3,4 +3,6 @@
 
 import config from './main.config';
 
-export default config;
+export {
+  config
+};

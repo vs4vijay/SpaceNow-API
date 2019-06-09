@@ -3,6 +3,6 @@
 
 import User from './user.model';
 
-export default {
+export {
   User
 };

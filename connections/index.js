@@ -3,6 +3,6 @@
 
 import sequelize from './database';
 
-export default {
+export {
   sequelize
 };

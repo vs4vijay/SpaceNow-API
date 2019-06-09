@@ -3,6 +3,6 @@
 
 import users from './user.controller';
 
-export default {
+export {
   users
 };

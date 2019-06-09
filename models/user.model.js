@@ -3,7 +3,7 @@
 
 import Sequelize from 'sequelize';
 
-import connections from '../connections';
+import { sequelize } from '../connections';
 
 class User extends Sequelize.Model {}
 
@@ -24,7 +24,7 @@ User.init({
     defaultValue: true
   }
 }, {
-  sequelize: connections.sequelize,
+  sequelize: sequelize,
   modelName: 'user'
 });
 

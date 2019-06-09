@@ -3,8 +3,8 @@
 
 import Sequelize from 'sequelize';
 
-import config from '../config';
-import logger from '../utils/logger';
+import { config } from '../config';
+import { logger } from '../utils';
 
 
 const sequelize = new Sequelize(
