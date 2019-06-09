@@ -3,13 +3,14 @@
 
 import express from 'express';
 
+import container from '../common/container';
 import services from '../services';
 
 const router = express.Router();
-const userService = new services.UserService();
+const userService = container.get('UserService');
+
 
 // CRUD Operations
-
 router.post('/users', async (req, res) => {
   const userData = req.body;
   const user = await userService.create(userData);
@@ -42,7 +43,6 @@ router.delete('/users/:id', async (req, res) => {
 
 
 // Temporary APIs
-
 router.get('/viz', async function(req, res) {
   const user = await userService.create({
     name: 'Viz'

@@ -1,6 +1,9 @@
 'use strict';
 
 
+import { decorate, injectable } from 'inversify';
+
+import container from '../common/container';
 import connections from '../connections';
 import models from '../models';
 
@@ -31,5 +34,8 @@ class UserService {
   }
 
 }
+
+decorate(injectable(), UserService);
+container.bind(UserService.name).to(UserService);
 
 export default UserService;
