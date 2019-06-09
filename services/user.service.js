@@ -3,17 +3,13 @@
 
 import { decorate, injectable } from 'inversify';
 
-import container from '../common/container';
-import { connections } from '../connections';
+import { container } from '../common';
 import { User } from '../models';
 
 class UserService {
 
   create(user) {
     return User.create(user);
-    // return connections.sequelize.sync({ force: false }).then(_ => {
-    // 	return models.User.create(user);
-    // });
   }
 
   get(userId) {

@@ -3,11 +3,11 @@
 
 import express from 'express';
 
-import container from '../common/container';
-import services from '../services';
+import { container } from '../common';
+import { UserService } from '../services';
 
 const router = express.Router();
-const userService = container.get('UserService');
+const userService = container.get(UserService.name);
 
 
 // CRUD Operations
