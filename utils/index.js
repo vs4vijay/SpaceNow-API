@@ -2,7 +2,9 @@
 
 
 import logger from './logger';
+import healthcheck from './healthcheck';
 
 export {
-  logger
+  logger,
+  healthcheck
 };

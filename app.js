@@ -1,15 +1,16 @@
 'use strict';
 
 
+import http from 'http';
 import express from 'express';
+import { createTerminus } from '@godaddy/terminus';
 
 import { config } from './config';
 import { users } from './routes';
-import { logger } from './utils';
+import { logger, healthcheck } from './utils';
 
 
 const app = express();
-
 
 app.set('etag', false);
 app.set('x-powered-by', false);
@@ -18,21 +19,18 @@ app.set('x-powered-by', false);
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
+// Health Check API
+const healthCheckServer = http.createServer(app);
+createTerminus(healthCheckServer, healthcheck.options);
+healthCheckServer.listen(config.server.port + 1); // Health Check Server will use next port number from server
+
+
+app.get(['/', '/api'], (req, res) => {
   res.send({success: true, message: 'Server is Running'});
 });
 
-// Health Check API
-app.get('/api/health-check', (req, res) => {
-  res.send({success: true, message: 'Health Check'});
-});
-
-
-
 // Application Routes
 app.use('/api/v1', users);
-
-
 
 // Not Found Route
 app.get('*', (req, res) => {

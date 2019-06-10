@@ -95,7 +95,7 @@ Example:
   })
 ```
 
-3. Modify model file to reflect those changes in ORM.
+3. Modify model file to reflect those changes in ORM
 
 Add or Remove appropriate fields to `user.model.js`.
 
@@ -127,7 +127,9 @@ Example:
 - [x] IoC
     - Done using `inversify`
 - [ ] Base Classes
-- [ ] Proper Imports
+- [x] Proper Imports
+- [x] Health Check API
+  - Using `Terminus`
 - [x] CRUD REST API
 - [ ] Standard Response and Error
 - [x] ESLint
