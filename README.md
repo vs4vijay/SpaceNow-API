@@ -124,7 +124,8 @@ Example:
     - [ ] Create Database and Tables if not exists
 - [ ] Logging (https://logrocket.com/)
     - [ ] Audit Logs / Tracability
-- [ ] IoC
+- [x] IoC
+    - Done using `inversify`
 - [ ] Base Classes
 - [ ] Proper Imports
 - [x] CRUD REST API
@@ -134,6 +135,7 @@ Example:
 - [ ] Validations
 - [ ] Limit, Offset
 - [ ] Authentication
+- [ ] API Specs
 - [ ] Security (Helmet)
   - https://expressjs.com/en/advanced/best-practice-security.html
   - https://github.com/RisingStack/protect
