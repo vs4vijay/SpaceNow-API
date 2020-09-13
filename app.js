@@ -40,6 +40,7 @@ app.get('*', (req, res) => {
 
 // Start Server
 if (!module.parent) {
+  // OR require.main == module
   app.listen(config.server.port, () => {
     logger.info(`[+] Server Started on Port: ${config.server.port}`);
   });

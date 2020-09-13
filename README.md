@@ -141,6 +141,8 @@ Example:
 - [ ] Security (Helmet)
   - https://expressjs.com/en/advanced/best-practice-security.html
   - https://github.com/RisingStack/protect
+- [ ] Best Practices
+  - https://expressjs.com/en/advanced/best-practice-performance.html
 - [ ] Deployment / Monitoring
 - [ ] Dockerize
 - [ ] CI/CD
