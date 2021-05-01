@@ -8,24 +8,24 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@godaddy/terminus": "^4.1.2",
-    "@hapi/joi": "^15.0.3",
-    "dotenv": "^8.0.0",
-    "express": "^4.16.4",
-    "inversify": "^5.0.5",
-    "mysql2": "^1.6.5",
-    "reflect-metadata": "^0.1.13",
-    "sequelize": "^5.8.6",
-    "winston": "^3.2.1"
+    "@godaddy/terminus": "4.1.2",
+    "@hapi/joi": "15.0.3",
+    "dotenv": "8.0.0",
+    "express": "4.16.4",
+    "inversify": "5.1.1",
+    "mysql2": "1.6.5",
+    "reflect-metadata": "0.1.13",
+    "sequelize": "5.8.6",
+    "winston": "3.2.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "nodemon": "^1.19.0",
-    "prettier": "^1.18.2"
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "6.26.0",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "5.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "nodemon": "1.19.0",
+    "prettier": "1.18.2"
   }
 }
