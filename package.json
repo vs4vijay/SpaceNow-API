@@ -10,7 +10,7 @@
   "dependencies": {
     "@godaddy/terminus": "^4.1.2",
     "@hapi/joi": "^15.0.3",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "inversify": "^5.0.5",
     "mysql2": "^1.6.5",
