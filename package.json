@@ -15,7 +15,7 @@
     "inversify": "^5.0.5",
     "mysql2": "^1.6.5",
     "reflect-metadata": "^0.1.13",
-    "sequelize": "^5.8.6",
+    "sequelize": "^6.21.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {
