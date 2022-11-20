@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "8.*"
+    "node": "18.*"
   },
   "scripts": {
     "start": "nodemon app.js --exec babel-node",
